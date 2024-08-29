@@ -41,26 +41,14 @@ export default function ParcelForm(props: ParcelFormProps) {
           </div>
           <div className="mb-4">
             <label htmlFor="predefinedPackage" className="block mb-2">Predefined Package</label>
-            <select
-              id="predefinedPackage"
-              name="predefinedPackage"
-              className="w-full p-2 border rounded"
-              onChange={(e) => {
-                const [weight, length, width, height] = e.target.value.split(',');
-                document.getElementById('weight').value = weight;
-                document.getElementById('length').value = length;
-                document.getElementById('width').value = width;
-                document.getElementById('height').value = height;
-              }}
-            >
+            <select id="predefinedPackage" name="predefinedPackage" className="w-full p-2 border rounded">
               <option value="">Select a package</option>
-              <option value="0.5,25,15,2">Small Envelope (0.5kg, 25x15x2cm)</option>
-              <option value="1,30,20,5">Medium Box (1kg, 30x20x5cm)</option>
-              <option value="3,40,30,20">Large Box (3kg, 40x30x20cm)</option>
-              <option value="5,50,40,30">Extra Large Box (5kg, 50x40x30cm)</option>
+              <option value="small">Small Box (20x15x10 cm)</option>
+              <option value="medium">Medium Box (30x25x15 cm)</option>
+              <option value="large">Large Box (40x35x20 cm)</option>
+              <option value="envelope">Padded Envelope (25x35x2 cm)</option>
             </select>
           </div>
-
           <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
             Submit Parcel
           </button>
