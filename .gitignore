@@ -1,1 +1,4 @@
 /venv
+/api/api/.my_pgpass
+/api/api/.pg_service.conf
+/api/api/.env
